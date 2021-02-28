@@ -84,3 +84,9 @@ variable "lambda_runtime" {
   default     = "python3.7"
   description = "Runtime for the lambda function. Only tested with Python."
 }
+
+variable "layers" {
+  type = array
+  default = []
+  description = "Lambda layers to include with the function. Default is None."
+}

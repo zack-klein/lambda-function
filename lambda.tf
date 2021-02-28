@@ -20,6 +20,7 @@ resource "aws_lambda_function" "lambda" {
   runtime       = var.lambda_runtime
   handler       = "${var.lambda_handler_file_name}.${var.lambda_handler_function_name}"
   timeout       = var.timeout
+  layers        = var.layers
 
   tracing_config {
     mode = var.xray_tracing_mode
