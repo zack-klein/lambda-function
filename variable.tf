@@ -86,7 +86,7 @@ variable "lambda_runtime" {
 }
 
 variable "layers" {
-  type        = array
+  type        = list(string)
   default     = []
   description = "Lambda layers to include with the function. Default is None."
 }
